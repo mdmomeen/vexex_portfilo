@@ -1,5 +1,6 @@
 "use client";
 
+<<<<<<< HEAD
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, ChevronDown } from "lucide-react";
@@ -7,6 +8,12 @@ import { ExternalLink, ChevronDown } from "lucide-react";
 export default function Portfolio() {
   const [showAll, setShowAll] = useState(false);
 
+=======
+import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
+
+export default function Portfolio() {
+>>>>>>> 235d7773c6392969ad7d635b74f6bbce72d607af
   const projects = [
     {
       title: "Interior Architecture CRM Management System",
@@ -36,6 +43,7 @@ export default function Portfolio() {
       color: "from-yellow-500/20 to-amber-900/20",
       image: "/img/gold_management.png",
     },
+<<<<<<< HEAD
     {
       title: "Real Estate static website",
       desc: "Real Estate static website for showcasing properties and services.",
@@ -58,6 +66,8 @@ export default function Portfolio() {
       image: "/img/resturant.png",
     },
 
+=======
+>>>>>>> 235d7773c6392969ad7d635b74f6bbce72d607af
   ];
 
   return (
@@ -65,7 +75,11 @@ export default function Portfolio() {
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
+<<<<<<< HEAD
             <motion.h2
+=======
+            <motion.h2 
+>>>>>>> 235d7773c6392969ad7d635b74f6bbce72d607af
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -73,7 +87,11 @@ export default function Portfolio() {
             >
               Featured Work
             </motion.h2>
+<<<<<<< HEAD
             <motion.h3
+=======
+            <motion.h3 
+>>>>>>> 235d7773c6392969ad7d635b74f6bbce72d607af
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -86,7 +104,11 @@ export default function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+<<<<<<< HEAD
           {projects.slice(0, showAll ? projects.length : 2).map((project, index) => (
+=======
+          {projects.map((project, index) => (
+>>>>>>> 235d7773c6392969ad7d635b74f6bbce72d607af
             <motion.a
               key={index}
               href={project.url}
@@ -105,6 +127,7 @@ export default function Portfolio() {
                   <div className="w-full h-full bg-white rounded-xl shadow-2xl flex flex-col overflow-hidden transform group-hover:scale-[1.02] transition-transform duration-700 ring-4 ring-white/40">
                     {/* Browser UI Bar */}
                     <div className="h-6 md:h-8 bg-gray-100 border-b border-gray-200 flex items-center px-4 gap-2 flex-shrink-0">
+<<<<<<< HEAD
                       <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
                       <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
@@ -118,6 +141,21 @@ export default function Portfolio() {
                         className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
+=======
+                       <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                       <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                       <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                    </div>
+                     {/* Dynamic Image Container */}
+                     <div className="flex-1 w-full relative bg-gray-50 overflow-hidden">
+                       {/* eslint-disable-next-line @next/next/no-img-element */}
+                       <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                       />
+                     </div>
+>>>>>>> 235d7773c6392969ad7d635b74f6bbce72d607af
                   </div>
                 </div>
                 <div className="absolute inset-0 bg-navy/0 group-hover:bg-navy/10 transition-colors duration-300"></div>
@@ -136,6 +174,7 @@ export default function Portfolio() {
             </motion.a>
           ))}
         </div>
+<<<<<<< HEAD
 
         {projects.length > 2 && (
           <div className="flex justify-center mt-16">
@@ -148,6 +187,8 @@ export default function Portfolio() {
             </button>
           </div>
         )}
+=======
+>>>>>>> 235d7773c6392969ad7d635b74f6bbce72d607af
       </div>
     </section>
   );
